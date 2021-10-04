@@ -5,22 +5,21 @@ import Toast from "react-native-easy-toast"
 const EventButton = () => {
     const [toast, setToast] = useState();
 
-    const pressIn = useCallback(()=> {
+    const pressIn = ()=> {
         toast.show('Press In!!',1000);
-    })
+    }
 
-    const press = useCallback(()=> {
+    const press = ()=> {
         toast.show('Press!!',1000);
-    })
+    }
 
-    const pressOut = useCallback(()=> {
+    const pressOut = ()=> {
         toast.show('Press Out!!',1000);
-    })
+    }
 
-    const pressLong = useCallback(()=> {
+    const pressLong = ()=> {
         toast.show('Press Long!!',1000);
-    })
-
+    }
 
     return (
         <View>
@@ -41,7 +40,6 @@ const EventButton = () => {
             </Pressable>
             <Toast style={style.toast} position="top" ref={(toast) => setToast(toast)} />
         </View>
-
     )
 }
 
